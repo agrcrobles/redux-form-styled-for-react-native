@@ -140,6 +140,6 @@ Scan this QR code with your Expo mobile app to load the project immediately.
 
 https://expo.io/@agrcrobles/redux-form-ui-generic-example
 
-![QR]
 
-[qr]: ./assets/expo_qr.png
+![QR](https://raw.githubusercontent.com/agrcrobles/redux-form-styled-for-react-native/master/assets/expo-qr.png "QR Expo")
+
