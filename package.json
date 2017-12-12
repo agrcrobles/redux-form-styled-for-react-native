@@ -1,0 +1,49 @@
+{
+  "name": "redux-form-styled-for-react-native",
+  "version": "0.1.0",
+  "private": true,
+  "devDependencies": {
+    "babel-eslint": "^8.0.3",
+    "babel-preset-react-native": "^4.0.0",
+    "eslint": "^4.12.1",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-flowtype": "^2.39.1",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-jest": "^21.3.2",
+    "eslint-plugin-prettier": "^2.3.1",
+    "eslint-plugin-react": "^7.5.1",
+    "flow-bin": "^0.56.0",
+    "jest-expo": "23.0.0",
+    "prettier": "^1.9.2",
+    "react-native-scripts": "1.8.1",
+    "react-test-renderer": "16.0.0"
+  },
+  "main": "./node_modules/react-native-scripts/build/bin/crna-entry.js",
+  "scripts": {
+    "start": "react-native-scripts start",
+    "eject": "react-native-scripts eject",
+    "android": "react-native-scripts android",
+    "ios": "react-native-scripts ios",
+    "jest": "node_modules/.bin/jest",
+    "lint": "node node_modules/.bin/eslint . --fix",
+    "flow": "flow .",
+    "test": "npm run lint && npm run flow && npm run jest"
+  },
+  "engines": {
+    "node": ">=6 <9"
+  },
+  "author": "Alejandro Garcia",
+  "jest": {
+    "preset": "jest-expo"
+  },
+  "dependencies": {
+    "expo": "^23.0.4",
+    "prop-types": "^15.6.0",
+    "react": "16.0.0",
+    "react-broadcast": "^0.6.0",
+    "react-native": "0.50.3",
+    "react-redux": "^5.0.6",
+    "redux": "^3.7.2",
+    "redux-form": "^7.2.0"
+  }
+}
