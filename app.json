@@ -1,5 +1,13 @@
 {
   "expo": {
+    "name": "redux-form-styled-for-react-native",
+    "description": "react-native components with redux-form",
+    "slug": "redux-form-styled-for-react-native",
+    "privacy": "public",
+    "version": "1.0.1",
+    "orientation": "portrait",
+    "primaryColor": "#cccccc",
+    "icon": "./assets/icon.png",
     "sdkVersion": "23.0.0"
   }
 }

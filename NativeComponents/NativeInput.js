@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Text, TextInput } from "react-native";
+import { Text, TextInput, View } from "react-native";
 import NativeLabelContainer from "./NativeLabelContainer";
 
 class NativeInput extends React.Component {
@@ -23,21 +23,26 @@ class NativeInput extends React.Component {
 		// injected theme
 
 		return (
-			<NativeLabelContainer theme={theme} floatingLabelText={floatingLabelText}>
-				<TextInput
-					style={theme.TextInput}
-					underlineColorAndroid="transparent"
-					onChangeText={onChange}
-					selectTextOnFocus
-					onBlur={onBlur}
-					ref={this.saveRef}
-					onFocus={onFocus}
-					value={value}
-					placeholder={floatingLabelText}
-					keyboardType={keyboardType}
-				/>
+			<View>
+				<NativeLabelContainer
+					theme={theme}
+					floatingLabelText={floatingLabelText}
+				>
+					<TextInput
+						style={theme.TextInput}
+						underlineColorAndroid="transparent"
+						onChangeText={onChange}
+						selectTextOnFocus
+						onBlur={onBlur}
+						ref={this.saveRef}
+						onFocus={onFocus}
+						value={value}
+						placeholder={floatingLabelText}
+						keyboardType={keyboardType}
+					/>
+				</NativeLabelContainer>
 				{!!errorText && <Text style={theme.ErrorText}>{errorText}</Text>}
-			</NativeLabelContainer>
+			</View>
 		);
 	}
 }

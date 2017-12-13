@@ -17,9 +17,9 @@
 
 * Used `getRenderedComponent()` to return reference to the UI component that has been rendered. This is useful for calling instance methods on the UI components. For example, if you wanted to focus any given field
 
-* Use `errorMessage` to display a message when it is due.
+* Usee `errorMessage` string to display a message when it is due.
 
-* Use a generic `ruleRunner` to eval my own `rules`.
+* Usee a generic `ruleRunner` to eval my own validation `rules`.
 
 ## Usage
 
@@ -33,7 +33,7 @@ import { Field, reduxForm } from "redux-form";
 import { TextInput } from "react-native";
 import { reduxForm } from "redux-form";
 
-const YourDefaultTheme = {
+const SimpleTheme = {
   TextInput: {
     borderColor: "red"
   },
@@ -41,10 +41,10 @@ const YourDefaultTheme = {
     color: "red"
   }
 };
-class MyApp extends React.PureComponent {
+class MyApp extends React.PureComponent<{}> {
   render() {
     return (
-      <ThemeProvider Theme={YourDefaultTheme}>
+      <ThemeProvider theme={SimpleTheme}>
         <MyFieldWrapped />
       </ThemeProvider>
     );
@@ -52,8 +52,9 @@ class MyApp extends React.PureComponent {
 }
 
 const MyTextField = UIField(SimpleInputTextField);
-class MyFieldWrapped extends Component {
+class MyFieldWrapped extends Component<{}> {
   render() {
+    // redux-form field
     return (
       <Field
         name="name"
@@ -71,7 +72,7 @@ class MyFieldWrapped extends Component {
 const SimpleInputTextField = props => {
   const { theme, errorText, onChange, onBlur, onFocus, value } = props;
 
-  // Injected theme to props
+  // Injected theme and input props
   return (
     <View>
       <TextInput

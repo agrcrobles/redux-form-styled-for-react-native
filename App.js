@@ -1,37 +1,27 @@
-import React, { Component } from "react";
-import { Text, View, StyleSheet, KeyboardAvoidingView } from "react-native";
+import * as React from "react";
+
 import MyApp from "./MyApp";
 
-export default class App extends Component {
+import { createStore, combineReducers } from "redux"; // 3.7.2
+import { reducer as reduxFormReducer } from "redux-form"; // 7.2.0
+import { Provider } from "react-redux"; // 5.0.6
+
+import ThemeProvider from "./Theme/ThemeProvider";
+import Theme from "./Theme";
+
+const reducer = combineReducers({
+	form: reduxFormReducer, // mounted under "form"
+});
+const store = createStore(reducer);
+
+export default class App extends React.Component<*> {
 	render() {
 		return (
-			<View style={styles.container}>
-				<View style={styles.header}>
-					<Text style={styles.description}>
-						This demo shows how to instance React Native Components with
-						redux-form cleanly.
-					</Text>
-				</View>
-				<KeyboardAvoidingView style={styles.form}>
+			<ThemeProvider Theme={Theme}>
+				<Provider store={store}>
 					<MyApp />
-				</KeyboardAvoidingView>
-			</View>
+				</Provider>
+			</ThemeProvider>
 		);
 	}
 }
-
-const styles = StyleSheet.create({
-	container: {
-		flex: 1,
-		backgroundColor: "#ecf0f1",
-	},
-	header: {
-		paddingTop: 40,
-		padding: 20,
-		backgroundColor: "#336699",
-	},
-	description: {
-		fontSize: 14,
-		color: "white",
-	},
-});

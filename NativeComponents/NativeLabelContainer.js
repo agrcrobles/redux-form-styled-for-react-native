@@ -7,8 +7,8 @@ class NativeLabelContainer extends React.Component<*> {
 		const { theme, floatingLabelText, children } = this.props;
 
 		return (
-			<View>
-				<Text style={theme.Label}>{floatingLabelText}</Text>
+			<View style={theme.Label.View}>
+				<Text style={theme.Label.Text}>{floatingLabelText}</Text>
 				{children}
 			</View>
 		);
