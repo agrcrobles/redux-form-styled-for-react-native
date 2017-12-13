@@ -139,8 +139,7 @@ Using `ruleRunner` useful pattern taken from:
 
 Scan this QR code with your Expo mobile app to load the project immediately.
 
-https://expo.io/@agrcrobles/redux-form-ui-generic-example
+https://expo.io/@agrcrobles/redux-form-styled-for-react-native
 
-
-![QR](https://raw.githubusercontent.com/agrcrobles/redux-form-styled-for-react-native/master/assets/expo-qr.png "QR Expo")
+![QR](https://raw.githubusercontent.com/agrcrobles/redux-form-styled-for-react-native/master/assets/qr.png "QR Expo")
 
