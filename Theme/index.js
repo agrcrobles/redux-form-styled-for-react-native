@@ -15,7 +15,6 @@ export default {
 		alignItems: "flex-end",
 		backgroundColor: "transparent",
 		paddingHorizontal: 10,
-		zIndex: -1,
 	},
 	Header: {
 		paddingTop: 40,
@@ -29,9 +28,9 @@ export default {
 	},
 	Label: {
 		Text: {
-			color: "#555",
-			paddingTop: 20,
-			paddingBottom: 10,
+			color: "#444",
+			paddingTop: 17,
+			paddingBottom: 12,
 			fontSize: 14,
 			flex: 1,
 		},
@@ -39,14 +38,16 @@ export default {
 			flexDirection: "row",
 			justifyContent: "space-between",
 			borderBottomWidth: 1,
-			borderBottomColor: "#777",
+			borderBottomColor: "#BBB",
 		},
 	},
 	ErrorText: {
 		color: dark,
+		paddingTop: 5,
+		fontSize: 12,
 	},
 	Switch: {
-		paddingTop: 5,
+		marginTop: 8,
 		alignItems: "center",
 		justifyContent: "center",
 	},

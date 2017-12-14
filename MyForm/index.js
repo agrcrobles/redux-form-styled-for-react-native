@@ -12,5 +12,8 @@ export default reduxForm({
 		slider: 0,
 	},
 	validate: values =>
-		runner.run(values, [runner.ruleRunner("name", "Name", rules.required)]),
+		runner.run(values, [
+			runner.ruleRunner("name", "Name", rules.required),
+			runner.ruleRunner("phone", "Phone", rules.required),
+		]),
 })(MyReduxForm);
