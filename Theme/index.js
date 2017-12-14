@@ -12,10 +12,10 @@ export default {
 		marginHorizontal: 12,
 	},
 	Bottom: {
-		marginRight: 12,
-		marginBottom: 12,
 		alignItems: "flex-end",
-		backgroundColor: "rgba(0,0,0,0)",
+		backgroundColor: "transparent",
+		paddingHorizontal: 10,
+		zIndex: -1,
 	},
 	Header: {
 		paddingTop: 40,
@@ -29,23 +29,26 @@ export default {
 	},
 	Label: {
 		Text: {
-			color: "#777",
-			paddingTop: 17,
-			paddingBottom: 9,
+			color: "#555",
+			paddingTop: 20,
+			paddingBottom: 10,
 			fontSize: 14,
+			flex: 1,
 		},
 		View: {
 			flexDirection: "row",
 			justifyContent: "space-between",
 			borderBottomWidth: 1,
-			borderBottomColor: dark,
+			borderBottomColor: "#777",
 		},
 	},
 	ErrorText: {
-		color: "#c62828",
+		color: dark,
 	},
 	Switch: {
-		flex: 1,
+		paddingTop: 5,
+		alignItems: "center",
+		justifyContent: "center",
 	},
 	Slider: {
 		flex: 1,

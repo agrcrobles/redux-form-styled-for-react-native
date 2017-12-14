@@ -1,6 +1,7 @@
 {
   "name": "redux-form-styled-for-react-native",
   "version": "0.1.0",
+  "description": "A clean way to set custom styles to react native components with redux-form",
   "private": true,
   "devDependencies": {
     "babel-eslint": "^8.0.3",
@@ -29,6 +30,18 @@
     "flow": "flow .",
     "test": "npm run lint && npm run flow && npm run jest"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/agrcrobles/redux-form-styled-for-react-native.git"
+  },
+  "bugs": {
+    "url": "https://agrcrobles/redux-form-styled-for-react-native/issues"
+  },
+  "homepage": "https://agrcrobles/redux-form-styled-for-react-native#readme",
+  "keywords": [
+    "react-native",
+    "redux-form"
+  ],
   "engines": {
     "node": ">=6 <9"
   },
