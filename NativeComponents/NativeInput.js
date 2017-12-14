@@ -1,13 +1,15 @@
+// @flow
 import React from "react";
 
 import { Text, TextInput, View } from "react-native";
 import NativeLabelContainer from "./NativeLabelContainer";
 
-class NativeInput extends React.Component {
+class NativeInput extends React.Component<*> {
 	focus() {
 		this.input.focus();
 	}
-	saveRef = input => (this.input = input);
+	input: any;
+	saveRef = (input: any) => (this.input = input);
 
 	render() {
 		const {

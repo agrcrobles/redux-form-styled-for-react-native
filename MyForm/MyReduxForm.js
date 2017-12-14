@@ -32,7 +32,8 @@ const SwitchField = UIField(NativeSwitch);
 
 class MyForm extends Component<{
 	theme: ThemeType,
-	handleSubmit: Function,
+	handleSubmit: (t: Function) => Function,
+	onSubmit: Function,
 }> {
 	componentDidMount() {
 		this.ref // the Field
@@ -43,7 +44,7 @@ class MyForm extends Component<{
 	ref: any;
 	saveRef = (ref: any) => (this.ref = ref);
 	render() {
-		const { theme, handleSubmit } = this.props;
+		const { theme, handleSubmit, onSubmit } = this.props;
 
 		return (
 			<KeyboardAvoidingView behavior="padding" style={styles.main}>
@@ -80,7 +81,7 @@ class MyForm extends Component<{
 					/>
 				</ScrollView>
 				<View style={theme.Bottom}>
-					<NativeTouchable onPress={handleSubmit(this.props.onSubmit)}>
+					<NativeTouchable onPress={handleSubmit(onSubmit)}>
 						<Ionicons name="md-add-circle" {...theme.Touchable.Icon} />
 					</NativeTouchable>
 				</View>

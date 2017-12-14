@@ -1,9 +1,11 @@
 // @flow
 
-import React from "react";
+import * as React from "react";
 import { Text, TouchableOpacity } from "react-native";
 import withTheme from "../Theme/withTheme";
-class NativeTouchable extends React.PureComponent<*> {
+import type { ThemeType } from "../types";
+
+class NativeTouchable extends React.Component<*> {
 	render() {
 		const hitSlop = { top: 20, left: 20, bottom: 20, right: 20 };
 		const { theme, children, ...rest } = this.props;

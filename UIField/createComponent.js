@@ -11,19 +11,20 @@ import * as React from "react";
 import type { ThemeType } from "../types";
 import { Subscriber } from "react-broadcast";
 
-type Props = {
-	errorText?: string,
-	theme: ThemeType,
-};
+type ChannelProps = { theme: ThemeType };
 
-export default function createComponent(
-	UIComponent: React.ComponentType<*>,
-	mapProps: (props: Object) => Object
-) {
-	class InputComponent extends React.Component<Props> {
-		// $FlowFixMe
-		static displayName = `ReduxFormUI${UIComponent.displayName}`;
-		myComponent: any;
+export default function createComponent<
+	Props: {
+		errorText?: string,
+		children?: React.Node,
+	}
+>(
+	UIComponent: React.ComponentType<Props>,
+	mapProps: (props: Props) => Object
+): React.ComponentType<ChannelProps & Props> {
+	class InputComponent extends React.Component<ChannelProps & Props> {
+		static displayName = `ReduxFormUI${UIComponent.displayName || "undefined"}`;
+		myComponent: React.ComponentType<ChannelProps & Props>;
 		getRenderedComponent() {
 			return this.myComponent;
 		}
