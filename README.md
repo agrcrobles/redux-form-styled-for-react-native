@@ -1,17 +1,30 @@
 # redux-form-styled-for-react-native
 
-## Table of Contents
+A cross platform way to define custom styles to `react-native` components with `redux-form`, working on `expo` and `react-native-web`.
 
-* [What's on it](#whatsonit)
-* [Usage](#usage)
-* [Theme](#theme)
-* [Rules](#rules)
-* [Normalize](#normalize)
-* [Examples](#examples)
+## Simple sample on expo
+
+Scan this QR code with your Expo mobile app to load the project immediately.
+
+https://expo.io/@agrcrobles/redux-form-styled-for-react-native
+
+![QR](https://raw.githubusercontent.com/agrcrobles/redux-form-styled-for-react-native/master/assets/qr.png "QR Expo")
+
+```
+yarn
+yarn start // and then select platform / device
+```
+
+## Simple example on the web
+
+http://redux-form-styled-react-native.herokuapp.com/
+
+```
+yarn
+yarn web // open localhost:3000
+```
 
 ## What is on it?
-
-* A clean way to set custom styles to react native components with `redux-form`.
 
 * Used `redux-form` transparently to instance layout components and set my own `theme` through the context efficiently.
 
@@ -135,11 +148,10 @@ Using `ruleRunner` useful pattern taken from:
 * [react-broadcast](https://github.com/ReactTraining/react-broadcast)
 * [redux-form](https://redux-form.com/7.2.0/)
 
-## Sample Expo
+## Contribute
 
-Scan this QR code with your Expo mobile app to load the project immediately.
+PR, stars ✭ and issue reporting, welcome!
 
-https://expo.io/@agrcrobles/redux-form-styled-for-react-native
+## License
 
-![QR](https://raw.githubusercontent.com/agrcrobles/redux-form-styled-for-react-native/master/assets/qr.png "QR Expo")
-
+MIT

@@ -85,7 +85,7 @@ module.exports = {
     "import/no-named-as-default-member": "off",
     "import/no-deprecated": "off",
     "import/no-extraneous-dependencies": "off",
-    "import/no-commonjs": "error",
+    "import/no-commonjs": "warn",
     "import/no-amd": "error",
     "import/no-nodejs-modules": "off",
     "import/imports-first": "error",
@@ -129,7 +129,7 @@ module.exports = {
     "react/jsx-sort-props": "off",
     "react/jsx-uses-react": "error",
     "react/jsx-uses-vars": "error",
-
+    "react/prefer-stateless-function": "off",
     "prettier/prettier": [
       "error",
       {
@@ -143,7 +143,13 @@ module.exports = {
       }
     ]
   },
-
+  "settings": {
+		"import/resolver": {
+			"node": {
+				"extensions": [".js", ".native.js", ".ios.js", ".android.js"]
+			}
+		}
+	},
   overrides: {
     files: ["**/__tests__/**/*.js", "**/?(*.)(spec|test).js"],
     env: {

@@ -1,3 +1,5 @@
+import { Platform } from "react-native";
+
 const primary = "#b71c1c";
 const light = "#f05545";
 const dark = "#7f0000";
@@ -57,10 +59,13 @@ export default {
 	},
 	Touchable: {
 		Text: {
-			// color: white,
+			color: white,
 		},
 		Container: {
 			alignItems: "center",
+			padding: 10,
+			marginVertical: Platform.OS === "web" ? 20 : 0,
+			backgroundColor: Platform.OS === "web" ? primary : "transparent",
 		},
 		Icon: {
 			size: 52,

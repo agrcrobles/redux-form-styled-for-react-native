@@ -29,13 +29,17 @@
 ; Ignore polyfills
 <PROJECT_ROOT>/node_modules/react-native/Libraries/polyfills/.*
 
-; Ignore various node_modules
+; Ignore various native node_modules
 <PROJECT_ROOT>/node_modules/react-native-gesture-handler/.*
 <PROJECT_ROOT>/node_modules/expo/.*
 <PROJECT_ROOT>/node_modules/react-navigation/.*
 <PROJECT_ROOT>/node_modules/xdl/.*
 <PROJECT_ROOT>/node_modules/reqwest/.*
 <PROJECT_ROOT>/node_modules/metro-bundler/.*
+
+; Ignore various web node_modules
+<PROJECT_ROOT>/node_modules/animated/.*
+<PROJECT_ROOT>/node_modules/react-native-web
 
 [include]
 
@@ -53,6 +57,7 @@ module.file_ext=.js
 module.file_ext=.jsx
 module.file_ext=.json
 module.file_ext=.ios.js
+module.file_ext=.native.js
 
 munge_underscores=true
 

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Alert, Text, View, StyleSheet } from "react-native";
+import { Alert, Platform, Text, View, StyleSheet } from "react-native";
 import MyForm from "./MyForm";
 import withTheme from "./Theme/withTheme";
 import type { ThemeType } from "./types";
@@ -8,7 +8,11 @@ class MyApp extends Component<{
 	theme: ThemeType,
 }> {
 	onSubmit = event => {
-		Alert.alert("Title Form", JSON.stringify(event));
+		if (Platform.OS === "web") {
+			window.alert(JSON.stringify(event));
+		} else {
+			Alert.alert("Submit!", JSON.stringify(event));
+		}
 	};
 
 	render() {
